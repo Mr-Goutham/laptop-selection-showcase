@@ -1,0 +1,106 @@
+:root {
+  --primary-color: #0d6efd;
+  --background-color: #ffffff;
+  --text-color: #212529;
+  --accent-color: #e9f0ff;
+  --border-radius: 10px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--accent-color);
+}
+
+.controls select,
+.controls input,
+.controls button {
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.controls button {
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.controls button:hover {
+  background-color: #0b5ed7;
+}
+
+.laptop-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.laptop-card {
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s;
+}
+
+.laptop-card:hover {
+  transform: scale(1.02);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+/* Light Mode (Default) */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Dark Mode */
+body.dark {
+  --background-color: #121212;
+  --text-color: #f1f1f1;
+  --accent-color: #1f2a3a;
+  --primary-color: #007bff;
+  --box-shadow: none;
+}
+
+body.dark header,
+body.dark footer {
+  background-color: #1f2a3a;
+  color: white;
+}
+
+body.dark .controls,
+body.dark .laptop-card {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #444;
+}
