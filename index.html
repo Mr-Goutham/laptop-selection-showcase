@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laptop Selection Showcase</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Laptop Selection Showcase</h1>
+    <button id="themeToggle">Toggle Dark Mode</button>
+  </header>
+
+  <section class="controls">
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="gaming">Gaming</option>
+      <option value="business">Business</option>
+      <option value="student">Student</option>
+    </select>
+    <input type="text" id="searchBox" placeholder="Search by brand or model..." />
+    <button id="downloadBtn">Download List</button>
+  </section>
+
+  <main>
+    <div id="laptopList" class="laptop-list">
+      <!-- Laptops will be inserted here dynamically -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Laptop Selection Project</p>
+  </footer>
+
+  <script src="assets/js/laptop_data.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
